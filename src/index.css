@@ -2,11 +2,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  overflow-x: hidden;
   background: radial-gradient(circle at 15% 20%, #eef2ff 0%, #f8fafc 40%, #ffffff 100%);
   color: #0f172a;
 }
