@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import logo from '../assets/raqamli-dokon-logo.png'
 
 const navItems = [
   { label: 'Imkoniyatlar', href: '#features' },
@@ -16,7 +15,7 @@ function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="#hero" className="shrink-0">
           <img
-            src={logo}
+            src="/favicon.svg"
             alt="Raqamli Dokon"
             className="h-10 w-auto sm:h-12 lg:h-14"
           />
