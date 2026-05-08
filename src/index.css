@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
@@ -11,6 +12,49 @@ body {
   overflow-x: hidden;
   background: radial-gradient(circle at 15% 20%, #eef2ff 0%, #f8fafc 40%, #ffffff 100%);
   color: #0f172a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background: radial-gradient(circle at 20% 10%, #1e293b 0%, #0b1120 45%, #020617 100%);
+  color: #f8fafc;
+}
+
+.button-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-shine::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 90%;
+  height: 300%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.16) 45%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.16) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: button-shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes button-shine {
+  0% {
+    left: -130%;
+  }
+  55% {
+    left: -130%;
+  }
+  100% {
+    left: 180%;
+  }
 }
 
 #root {

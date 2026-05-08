@@ -7,10 +7,13 @@ import BenefitsSection from './components/BenefitsSection'
 import PricingSection from './components/PricingSection'
 import CtaSection from './components/CtaSection'
 import Footer from './components/Footer'
+import { useAppSettings } from './context/AppSettings'
 
 function App() {
+  const { theme } = useAppSettings()
+
   return (
-    <div className="overflow-x-hidden">
+    <div className={`overflow-x-hidden transition-colors duration-300 ${theme === 'dark' ? 'bg-slate-950 text-slate-100' : ''}`}>
       <Navbar />
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <HeroSection />
